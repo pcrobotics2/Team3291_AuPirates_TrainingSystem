@@ -50,7 +50,7 @@ class Main {
          * input.
          */
         // Read user input from the terminal.
-        System.out.print("Enter random characters: ");
+        System.out.print("Enter random string: ");
         inputValue = reader.readLine();
 
         System.out.println("You entered: " + inputValue);
@@ -59,13 +59,14 @@ class Main {
         System.out.println("You rolled a: " + rollValue);
         System.out.println("\n========================\n");
 
-        // Create a new 100-sided die that rolls 1 time.
+        // TASK: Create a new 100-sided die that rolls 1 time.
 
-        // Roll the die and save result into a variable.
+        // TASK: Roll the die and save result into a variable.
 
-        // Create a prompt to guess what the die will roll.
+        // TASK: Create a prompt to guess what the die will roll.
 
         /**
+         * TASK:
          * Check if guess matches number rolled.
          *
          * If match print "Yay! you chose the correctly"
