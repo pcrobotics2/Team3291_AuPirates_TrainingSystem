@@ -34,7 +34,7 @@ class Main {
         var dice = new Dice(1, 6);
         String inputValue;
         var reader = new BufferedReader(new InputStreamReader(System.in));
-        int rollValue = 0;
+        var rollValue = 0;
 
         /**
          * Generally for robotics we won't use use System.out.println.   We should always try
@@ -63,13 +63,14 @@ class Main {
 
         // TASK: Roll the die and save result into a variable.
 
-        // TASK: Create a prompt to guess what the die will roll.
+        // TASK: Create a prompt and save your guess of what the die will roll.
+        // HINT: You will need to convert the user guess to an Integer before the next TASK
 
         /**
          * TASK:
          * Check if guess matches number rolled.
          *
-         * If match print "Yay! you chose the correctly"
+         * If match print "Yay! you chose correctly"
          *
          * If the guess doesn't match, the print "Try again"
          */
