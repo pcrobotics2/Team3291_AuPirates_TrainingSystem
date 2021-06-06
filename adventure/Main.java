@@ -34,7 +34,8 @@ class Main {
         var dice = new Dice(1, 6);
         String inputValue;
         var reader = new BufferedReader(new InputStreamReader(System.in));
-        int rollValue = 0;
+        var rollValue = 0;
+        var userGuess = 0;
 
         /**
          * Generally for robotics we won't use use System.out.println.   We should always try
@@ -49,6 +50,10 @@ class Main {
          * Shuffleboard, or Glass to take user inputs.   For intro stuff, it's a way to get user
          * input.
          */
+        
+         /**
+         * Commenting out as it was an example.
+        
         // Read user input from the terminal.
         System.out.print("Enter random string: ");
         inputValue = reader.readLine();
@@ -58,20 +63,31 @@ class Main {
         rollValue = dice.roll();
         System.out.println("You rolled a: " + rollValue);
         System.out.println("\n========================\n");
+        
+        */
 
         // TASK: Create a new 100-sided die that rolls 1 time.
+        var hundredDie = new Dice(1, 100);
 
         // TASK: Roll the die and save result into a variable.
+        int numberToGuess = hundredDie.roll();
 
         // TASK: Create a prompt to guess what the die will roll.
+        System.out.print("Enter your guess: ");
+        userGuess = Integer.parseInt(reader.readLine());
 
         /**
          * TASK:
          * Check if guess matches number rolled.
          *
-         * If match print "Yay! you chose the correctly"
+         * If match print "Yay! you chose correctly"
          *
          * If the guess doesn't match, the print "Try again"
          */
+        if (numberToGuess == userGuess) {
+            System.out.println("Yay! you chose correctly");
+        } else {
+            System.out.println("You guessed: " + userGuess + ", the number was: " + numberToGuess);
+        }
     }
 }
