@@ -67,27 +67,46 @@ class Main {
         */
 
         // TASK: Create a new 100-sided die that rolls 1 time.
-        var hundredDie = new Dice(1, 100);
+        var hundredDie = new Dice(1, 6);
 
         // TASK: Roll the die and save result into a variable.
         int numberToGuess = hundredDie.roll();
+        var successFlag = false;
 
-        // TASK: Create a prompt to guess what the die will roll.
-        System.out.print("Enter your guess: ");
-        userGuess = Integer.parseInt(reader.readLine());
+        System.out.println("Guess the generated number between 1-100.");
 
-        /**
-         * TASK:
-         * Check if guess matches number rolled.
-         *
-         * If match print "Yay! you chose correctly"
-         *
-         * If the guess doesn't match, the print "Try again"
-         */
-        if (numberToGuess == userGuess) {
+        for (var guessCnt = 4; guessCnt >= 0; guessCnt--) {
+            // TASK: Create a prompt to guess what the die will roll.
+            System.out.print("Enter your guess: ");
+            userGuess = Integer.parseInt(reader.readLine());
+
+            /**
+             * TASK:
+             * Check if guess matches number rolled.
+             *
+             * If match print "Yay! you chose correctly"
+             *
+             * If the guess doesn't match, the print "Try again"
+             */
+            if (numberToGuess == userGuess) {
+                successFlag = true;
+
+                break;
+            } else if (numberToGuess > userGuess) {
+                System.out.println("The number is greater than " + userGuess);
+            } else if (numberToGuess < userGuess) {
+                System.out.println("The number is less than " + userGuess);
+            }
+
+            if (guessCnt > 0) {
+                System.out.println("You have " + guessCnt + " remaining.");
+            }
+        }
+
+        if (successFlag) {
             System.out.println("Yay! you chose correctly");
         } else {
-            System.out.println("You guessed: " + userGuess + ", the number was: " + numberToGuess);
+            System.out.println("Please play again");
         }
     }
 }
