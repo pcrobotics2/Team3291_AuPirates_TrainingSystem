@@ -67,7 +67,7 @@ class Main {
         */
 
         // TASK: Create a new 100-sided die that rolls 1 time.
-        var hundredDie = new Dice(1, 6);
+        var hundredDie = new Dice(1, 100);
 
         // TASK: Roll the die and save result into a variable.
         int numberToGuess = hundredDie.roll();
