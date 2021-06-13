@@ -75,7 +75,7 @@ class Main {
 
         System.out.println("Guess the generated number between 1-100.");
 
-        for (var guessCnt = 4; guessCnt >= 0; guessCnt--) {
+        while (!successFlag) {
             // TASK: Create a prompt to guess what the die will roll.
             System.out.print("Enter your guess: ");
             userGuess = Integer.parseInt(reader.readLine());
@@ -96,10 +96,6 @@ class Main {
                 System.out.println("The number is greater than " + userGuess);
             } else if (numberToGuess < userGuess) {
                 System.out.println("The number is less than " + userGuess);
-            }
-
-            if (guessCnt > 0) {
-                System.out.println("You have " + guessCnt + " remaining.");
             }
         }
 
