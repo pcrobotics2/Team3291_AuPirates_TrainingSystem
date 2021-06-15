@@ -94,7 +94,7 @@ class Main {
                 break;
             } else if (numberToGuess > userGuess) {
                 System.out.println("The number is greater than " + userGuess);
-            } else if (numberToGuess < userGuess) {
+            } else {
                 System.out.println("The number is less than " + userGuess);
             }
         }
