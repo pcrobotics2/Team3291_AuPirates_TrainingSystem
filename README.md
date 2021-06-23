@@ -9,3 +9,5 @@ Like any crew, there are different levels of experience.    This training system
 Feel free to do your own research or ask another crewmate for help.   We encourage questions and curiosity.   Even the most experienced navigator needs help sometimes.    We all learn from each other at any experience level.
 
 Enough with the introductions, choose your path!
+
+Go to the Wiki for the lessons: https://github.com/pcrobotics2/Team3291_AuPirates_TrainingSystem/wiki
